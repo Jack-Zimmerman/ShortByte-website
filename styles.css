@@ -5,6 +5,7 @@ html{
 }
 
 body{
+    position: relative;
     margin:0;
     margin-top: 1vh;
     width: 90vw;
@@ -12,6 +13,8 @@ body{
     background-color: white;
     box-shadow: 10px 10px;
     border-radius: 10px;
+
+    overflow-x: hidden;
 }
 
 #pageHeader{
@@ -23,23 +26,122 @@ body{
     border-bottom: 0.75vh solid black;
 }
 
+/*
+    Header main text:
+*/
 
 #pageHeader h1{
     position: relative;
     width: 50%;
     height: 50%;
-    left: 50%;
     top: 50%;
 
     text-align: center;
-    font-size: 7vh;
+    font-size: 3.5vw;
     color: white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 #byteBold{
     color: gray;
 }
+
+/*
+   Header link array:
+*/
+
+
+#directorylist{
+    position: relative;
+    left: 52.5%;
+    bottom: 30%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5vw;
+}
+
+/*
+    active for whichever page you're currently on
+*/
+
+
+.headerlink{
+    position : relative;
+    float: left;
+    margin-left: 3vw;
+    color: black;
+
+    text-decoration: none;
+}
+
+.headerlink:not(.active):hover{
+    color: darkslategray;
+    transform: scale(1.3);
+    transition: all linear 0.2s;
+}
+
+.headerlink:not(.active):visited{
+    color: black;
+}
+
+
+.active{
+    color: white;
+}
+
+
+
+
+
+#mainmessage{
+    position: relative;
+    left: 3vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.25vw;
+    font-weight: 350;
+}
+
+#goals{
+    position: relative;
+    float:left;
+    left:  3vw;
+    width: 35%;
+    background-color: lightgray;
+    border-radius: 1vw;
+    padding: 1vw;
+    padding-top: 0;
+    border-style: solid;
+    box-shadow: 7px 7px gray;
+}
+
+#goals h1,li{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#goals h1{
+    color: darkblue;
+    font-size:2.5vw;
+}
+
+#goals li{
+    font-size: 1.25vw;
+    margin-top: 10px;
+}
+
+#goals:hover{
+    box-shadow: 10px 10px gray;
+    transition: box-shadow linear 0.3s;
+}
+
+#goals:hover > h1{
+    text-shadow:
+    -1px -1px 0 darkblue,
+    1px -1px 0 darkblue,
+    -1px 1px 0 darkblue,
+    1px 1px 0 darkblue;
+    transition: all 0.3s;
+}
+
+
