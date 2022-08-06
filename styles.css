@@ -147,15 +147,18 @@ body{
     font-size: 3vw;
 }
 
-.goalsgradient{
+.gradientborder{
     position: relative;
 
     float:right;
-    top:16vh;
     width: 0.5%;
     height: 40%;
     border-radius: 0.3vh;
     background: linear-gradient(0deg, lightblue 0%, skyblue 50%, blue 100%);
+}
+
+#goalsgradient{
+    top:20vh;
 }
 
 #goals{
