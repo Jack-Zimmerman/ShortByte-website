@@ -1,77 +1,48 @@
 
 :root{
     --bg: rgb(239, 238, 238);
+    --bg-color: #121212;
+    --light-bg-color: #222;
+    --primary-color: #517bdc;
+    --primary-light-color: #90B8F8;
+    --font-color: #e3e3e3;
 }
 
+@font-face {
+    font-family: 'circular';
+    src: url(fonts/CircularStd-Medium.woff2) format('woff2');
+}
 
-html{
-    background: linear-gradient(135deg,gray 0%, darkslategray 100%)
+* {
+    font-family: 'circular';
+    color: var(--font-color);
+    box-sizing: border-box;
 }
 
 body{
-    position: relative;
-    margin:0;
-    margin-top: 1vh;
-    width: 90vw;
-    margin-left: 5vw;
-    background-color: var(--bg);
-    box-shadow: 10px 10px;
-    border-radius: 10px;
-
-    overflow-x: hidden;
+    background-color: var(--bg-color);
+    margin: 0;
 }
 
-#pageHeader{
-    background: linear-gradient(0deg, rgb(189, 232, 247) 0%, rgb(82, 82, 255) 100%);
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
     width: 100%;
-    height: 20%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom: 0.75vh solid lightgray;
+    height: 90px;
+    padding: 0 20px;
+    background-color: var(--light-bg-color);
+    box-shadow: 0 1px 8px -2px rgb(0, 0, 0);
+
 }
 
-/*
-    Header main text:
-*/
-
-#pageHeader h1{
-    position: relative;
-    width: 50%;
-    height: 50%;
-    top: 50%;
-
-    text-align: center;
-    font-size: 3.5vw;
-    color: var(--bg);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    transform: translate(0, -50%);
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+.header > div {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
-#byteBold{
-    color: rgb(101, 100, 100);
-}
-
-/*
-   Header link array:
-*/
-
-
-#directorylist{
-    position: relative;
-    left: 52.5%;
-    bottom: 30%;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5vw;
-}
-
-/*
-    active for whichever page you're currently on
-*/
-
-
-.headerlink{
+.hLink{
     position : relative;
     float: left;
     margin-left: 3vw;
@@ -83,24 +54,22 @@ body{
     text-decoration: none;
 }
 
-.headerlink:not(.active):hover{
+.hLink:not(.active):hover{
     color: darkslategray;
     transform: scale(1.3);
     transition: all linear 0.2s;
 }
 
-.headerlink:not(.active):visited{
+.hLink:not(.active):visited{
     color: black;
 }
 
-
-.active{
-    color: white;
+.active {
+    color: var(--primary-color);
 }
 
 
-
-#whatwedo{
+#whatWeDo{
     position: relative;
     float:left;
     width: fit-content;
@@ -115,7 +84,7 @@ body{
     transition: all ease-in-out 1s;
 }
 
-#whatwedo:hover{
+.whatWeDo:hover{
     box-shadow: 10px 10px #adadad;
     border-radius: 3vh;
     
@@ -124,25 +93,25 @@ body{
     transition: all ease-in-out 0.5s;
 }
 
-#whatwedo h1,li,strong{
+.whatWeDo h1,li,strong{
     font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#whatwedo h1{
+.whatWeDo h1{
     font-weight: 600;
     color: purple;
     font-size:3vw;
     margin-bottom: 0;
 }
 
-#whatwedo li{
+.whatWeDo li{
     margin-top: 1vh;
     font-size: 1.75vw;
 }
 
 
-#whatwedo strong{
+.whatWeDo strong{
     color: green;
     font-size: 3vw;
 }
