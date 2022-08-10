@@ -1,0 +1,49 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="check"
+     x="0"
+     y="0"
+     width="25px"
+     height="25px"
+     viewBox="0 0 100 100"
+     preserveAspectRatio="xMidYMid meet"
+>
+<defs>
+    <style>
+            
+            
+            
+        
+
+        .svg-fill-primary {
+            fill: #517bdc;
+        }
+
+        .svg-fill-secondary {
+            fill: #65CDAE;
+        }
+
+        .svg-fill-tertiary {
+            fill: #E5E7EB;
+        }
+
+        .svg-stroke-primary {
+            stroke: #517bdc;
+        }
+
+        .svg-stroke-secondary {
+            stroke: #65CDAE;
+        }
+
+        .svg-stroke-tertiary {
+            stroke: #E5E7EB;
+        }
+    </style>
+</defs>
+    <path d="M12.3,55.4,33.8,76.9,87.7,23.1"
+      fill="none"
+      class="svg-stroke-primary"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="8"/>
+</svg>

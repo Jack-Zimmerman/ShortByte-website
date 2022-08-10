@@ -10,41 +10,56 @@
     <meta property="og:site_name" content="Home - ShortByte">
     <meta property="og:locale" content="en_US">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="script.js" defer></script>
     <title>Home - ShortByte</title>
   </head>
   <body>
-    <main>
-      <div class="header">
-          <div>LOGO PLACEHOLDER</div> 
-          <div class="headerLinks">
-            <a class="hLink active" href="#" >Home</a>
-            <a class="hLink" href="#">Our Team</a>
-            <a class="hLink" href="#">Pricing</a>
-            <a class="hLink" href="#">Support</a>
-          </div>
-      </div>
-    </main>
-    <div class="whatWeDo">
-      <h1>What we do:</h1>
-      <ul>
-        <li>Fully custom website made using raw code <strong>✓</strong></li> 
-        <li>Custom Domain Name just for your business <strong>✓</strong></li>
-        <li>Full hosting for your website handled by us <strong>✓</strong></li>
-        <li>List your website on Google <strong>✓</strong></li>
-        <li>Continuous management of all web features <strong>✓</strong></li>
-    </div>    
-    <div class="goals">
-      <h1>Our Goals:</h1>
-      <ul>
-        <li>Make your presence on the web <strong>easy</strong>.</li>
-        <li>Help you develop customer ties with a <strong>reactive</strong> website structure.</li>
-        <li>Drive traffic to your business through <strong>intuitive</strong> and straight-foward design.</li>
-        <li>Create an exceptionally <strong>affordable</strong> product with excellent servicing.</li> 
-      </ul>
+    <div class="ripple-bacground">
+      <div class="circle xxlarge shade1"></div>
+      <div class="circle xlarge shade2"></div>
+      <div class="circle large shade3"></div>
+      <div class="circle medium shade4"></div>
+      <div class="circle small shade5"></div>
     </div>
-    <div id="goalsgradient" class="gradientborder"></div>
+    <div class="header">
+        <img src="logo/companyLogo.svg" alt="" class="companyLogo">
+        <div>
+          <a class="hLink active" href="#" >Home</a>
+          <a class="hLink" href="#">Our Team</a>
+          <a class="hLink" href="#">Pricing</a>
+          <a class="hLink" href="#">Support</a>
+          <button class="contactUs" role="button">Contact Us</button>
+        </div>
+    </div>
+    <div class="main">
+      <div class="whatWeDo">
+          <div class="title">What we do:</div>
+          <ul>
+            <li>Fully custom website made using raw code</li>
+            <li>Custom Domain Name just for your business</li>
+            <li>Full hosting for your website handled by us</li>
+            <li>List your website on Google</li>
+            <li>Continuous management of all web features</li>
+      </div>
+      <img src="images/placeholder-image.jpg" alt="" class="placeholder">
+      <div class="goals">
+          <div class="title">Our Goals:</div>
+          <ul>
+            <li>Make your presence on the web <strong>easy</strong>. <img src="images/check.svg" alt="" class="check" aria-hidden="true"></li> 
+            <li>Help you develop customer ties with a <strong>reactive</strong> website structure. <img src="images/check.svg" alt="" class="check" aria-hidden="true"></li> 
+            <li>Drive traffic to your business through <strong>intuitive</strong> and straight-foward design. <img src="images/check.svg" alt="" class="check" aria-hidden="true"></li> 
+            <li>Create an exceptionally <strong>affordable</strong> product with excellent servicing. <img src="images/check.svg" alt="" class="check" aria-hidden="true"></li> 
+          </ul>
+        </div>
+        <img src="images/placeholder-image.jpg" alt="" class="placeholder">
+    </div>
   </body>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>
 
 
