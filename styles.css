@@ -78,6 +78,7 @@ body{
 .shade1{
     opacity: 0.2;
 }
+
 .shade2{
     opacity: 0.5;
 }
@@ -118,7 +119,6 @@ body{
     padding: 0 3vw;
     background-color: white;
     box-shadow: 0 1px 30px -20px rgb(0, 0, 0);
-
 }
 
 .header > div {
@@ -134,6 +134,21 @@ body{
     flex:  0 0 auto;
 }
 
+
+
+.header .contactUs{
+    background: linear-gradient(360deg, lightblue -50%, blue 100%);
+    color: var(--bg-color);
+}
+
+.header .contactUs:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px darkgray;
+    transition: linear 0.2s;
+}
+
+
+/*
 .header button {
     font-family: 'circular-light';
     font-weight: 800;
@@ -185,8 +200,8 @@ body{
 
 .header button::after {
   transform: translate(10px, 10px);
-  width: 35px;
-  height: 35px;
+  width: 0px;
+  height: 0px;
   background: #ffffff15;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -210,6 +225,7 @@ body{
   transition: 0s;
   transform: translate(0, 5%);
 }
+*/
 
 .hLink{
     font-family: 'circular-light';
@@ -221,7 +237,7 @@ body{
     border-radius: 10px;
 }
 
-.hLink:hover{
+.hLink:hover:not(.contactUs){
     color: var(--primary-color);
     transform: scale(1.05);
     transition: all ease-in-out 0.2s;
@@ -243,14 +259,23 @@ body{
     justify-self: center;
     align-self: center;
 }
+
+
 .whatWeDo > div, .goals > div{
     font-size: 2rem;
+    font-weight: 800;
     margin: 0;
 }
 .whatWeDo ul, .goals ul {
     padding: 0;
     font-size: 1.3rem;
 }
+
+.whatWeDo li, .goals li{
+    margin-top: 10px;
+    max-width: 30vw;
+}
+
 
 .goals {
     grid-row: 2/3;
@@ -271,7 +296,22 @@ body{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     transition: all 0.2s ease;
 }
+
 .check {
     position: absolute;
     margin: 0 0 20px 10px;
+}
+
+
+.createdBy{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createdBy h1{
+    color: #5e5e5e;
+    font-size: 1rem;
+    font-family: "circular-light";
 }
