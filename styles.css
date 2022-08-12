@@ -298,8 +298,14 @@ body{
 
 .title{
     font-size: clamp(1.7rem, 3vw, 2rem);
+}
+
+.whatWeDo > div, .goals > div{
+    position: relative;
+    font-size: 3rem;
     font-weight: 800;
     margin: 0;
+    right: 50px;
 }
 .whatWeDo ul, .goals ul {
     padding: 0;
@@ -307,6 +313,7 @@ body{
 }
 
 .whatWeDo li, .goals li{
+    font-size: 1.5rem;
     margin-top: 10px;
     font-family: 'circular-light';
     font-weight: 600;
