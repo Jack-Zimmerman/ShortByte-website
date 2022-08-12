@@ -25,16 +25,30 @@
     </div>
     <div class="header">
         <img src="logo/companyLogo.svg" alt="" class="companyLogo">
-        <div>
+        <nav>
           <a class="hLink active" href="#" >Home</a>
-          <a class="hLink" href="pages/ourteam.html">Our Team</a>
-          <a class="hLink" href="pages/pricing.html">Pricing</a>
-          <a class="hLink" href="pages/support.html">Support</a>
-          <a class="hLink contactUs" href="pages/contact.html">Contact Us</a>
+          <a class="hLink" href="#">Our Team</a>
+          <a class="hLink" href="#">Pricing</a>
+          <a class="hLink" href="#">Support</a>
+          <a class="contactUs" href="#">Contact Us</a>
+        </nav>
+        <div class="menuBtn">
+          <div class="menuBtnBurger"></div>
         </div>
+        <div class="modal">
+          <a class="contactUs" href="#">Contact Us</a>
+          <a class="hLink active" href="#" >Home</a>
+          <a class="hLink" href="#">Our Team</a>
+          <a class="hLink" href="#">Pricing</a>
+          <a class="hLink" href="#">Support</a>
+        </div>
+        <!-- I changed div to nav for the screen reader support -->
     </div>
     <div class="main">
-      <div class="whatWeDo">
+      <div class="whatWeDo"
+        data-aos="fade-right" 
+        data-aos-duration="600"
+        data-aos-delay="50">
           <div class="title">What we do:</div>
           <ul>
             <li>Fully custom website made using raw code.</li>
@@ -44,8 +58,15 @@
             <li>Long-term management of all web features.</li>
           </ul>
       </div>
-      <img src="https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="placeholder">
-      <div class="goals">
+      <img 
+          data-aos="fade-left" 
+          data-aos-duration="600" 
+          data-aos-delay="150"
+      src="https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="placeholder">
+      <div class="goals"
+        data-aos="fade-left" 
+          data-aos-duration="600" 
+          data-aos-delay="450">
           <div class="title">Our Goals:</div>
           <ul>
             <li>Make your presence on the web <strong>easy</strong>. <img src="images/check.svg" alt="" class="check" aria-hidden="true"></li> 
@@ -54,10 +75,16 @@
             <li>Deliver an exceptional product that is supremely <strong>affordable</strong>. <img src="images/check.svg" alt="" class="check" aria-hidden="true"></li> 
           </ul>
         </div>
-        <img src="https://images.unsplash.com/photo-1607703703674-df96af81dffa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="placeholder">
+        <img        
+          data-aos="fade-right" 
+          data-aos-duration="600" 
+          data-aos-delay="300"
+         src="https://images.unsplash.com/photo-1607703703674-df96af81dffa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="placeholder">
     </div>
     <div class="createdBy">
-      <h1>Website created by Kamran Huseynov, Jack Zimmerman</h1>
+      <p>Website created by Kamran Huseynov, Jack Zimmerman</p>
+      <!-- I changed it to <p> since the screen reader will read it as 
+        a crucial info -->
     </div>
   </body>
 
@@ -65,7 +92,6 @@
   <script>
     AOS.init();
   </script>
-
 
 </html>
 
