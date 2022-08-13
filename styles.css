@@ -249,7 +249,7 @@ body{
 }
 
 .placeholder:hover {
-    transform: scale(1.01);
+    transform: scale(1.05);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     transition: all 0.3s ease;
 }
@@ -356,7 +356,7 @@ body{
     Change Menu to hamburger:
 */
 
-@media only screen and (max-width:1050px) {
+@media only screen and (max-aspect-ratio: 4/3) {
     .header > nav {
         display: none;
     }
@@ -372,7 +372,7 @@ body{
 Change logo and main org
 */
 
-@media only screen and (max-width:1050px) {
+@media only screen and (max-aspect-ratio: 4/3) {
     .companyLogo {
         width: 150px;
         margin-left: 10px;
@@ -401,14 +401,14 @@ Change logo and main org
     Change font organization for mobile view:
 */
 
-@media only screen and (max-width:1050px){
+@media only screen and (max-aspect-ratio: 4/3){
 
     .whatWeDo, .goals{
         max-width: 100vw;
     }
     .whatWeDo > div, .goals > div{
         position: relative;
-        font-size: 2rem;
+        font-size: 5vw;
         font-weight: 800;
         margin: 0;
         right: 50px;
@@ -420,7 +420,7 @@ Change logo and main org
     }
     
     .whatWeDo li, .goals li{
-        font-size: 1rem;
+        font-size: 3vw;
         margin-top: 10px;
         font-family: 'circular-light';
         font-weight: 600;
