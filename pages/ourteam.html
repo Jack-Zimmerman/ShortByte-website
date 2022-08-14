@@ -5,13 +5,13 @@
     <meta name="description" content="ShortByte web solutions is a company run by High Schoolers that delivers Websites and custom software to small businesses.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="ShortByte Web Solutions">
-    <meta property="og:image" content="logo/companyLogo.svg">
+    <meta property="og:image" content="../logo/companyLogo.svg">
     <meta property="og:description" content="ShortByte web solutions is a company run by High Schoolers that delivers Websites and custom software to small businesses">
     <meta property="og:site_name" content="Home - ShortByte">
     <meta property="og:locale" content="en_US">
     <link rel="icon" href="../logo/SBlogo.ico"/>
     <link rel="stylesheet" type="text/css" href="../styles.css"/>
-    <link rel="stylesheet" type="text/css" href="../styles/ourteam.styles.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/ourteam.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="../script.js" defer></script>
     <title>Home - ShortByte</title>
@@ -26,13 +26,61 @@
     </div>
     <div class="header">
         <img src="../logo/companyLogo.svg" alt="" class="companyLogo">
-        <div>
-          <a class="hLink" href="../index.html" >Home</a>
-          <a class="hLink active" href="ourteam.html">Our Team</a>
-          <a class="hLink" href="pricing.html">Pricing</a>
-          <a class="hLink" href="support.html">Support</a>
-          <a class="hLink contactUs" href="contact.html">Contact Us</a>
+        <nav>
+          <a class="hLink" href="../index.html">Home</a>
+          <a class="hLink active">Our Team</a>
+          <a class="hLink" href="#">Pricing</a>
+          <a class="hLink" href="#">Support</a>
+          <a class="contactUs" href="#">Contact Us</a>
+        </nav>
+        <div class="menuBtn">
+          <div class="menuBtnBurger"></div>
         </div>
+        <div class="modal">
+          <a class="contactUs" >Contact Us</a>
+          <a class="hLink" href="../index.html">Home</a>
+          <a class="hLink active" href="#">Our Team</a>
+          <a class="hLink" href="#">Pricing</a>
+          <a class="hLink" href="#">Support</a>
+        </div>
+        <!-- I changed div to nav for the screen reader support -->
+    </div>
+
+
+    <div class="mainteam">
+      <h1 class="pageMainInfo">Meet Our Team:</h1>
+      <div class="teamGrid">
+        <div class="memberBio">
+          <img src="https://i.iheart.com/v3/catalog/artist/31083712?ops=fit(720%2C720)"/>
+          <h3>Lil Uzi Vert</h3> 
+          <div class="bioSplit"></div>
+          <p>Guy who uses too much autotune</p>
+        </div>
+        <div class="memberBio">
+          <img src="https://i.iheart.com/v3/catalog/artist/31083712?ops=fit(720%2C720)"/>
+          <h3>Lil Uzi Vert</h3> 
+          <div class="bioSplit"></div>
+          <p>Guy who uses too much autotune</p>
+        </div>
+        <div class="memberBio">
+          <img src="https://i.iheart.com/v3/catalog/artist/31083712?ops=fit(720%2C720)"/>
+          <h3>Lil Uzi Vert</h3> 
+          <div class="bioSplit"></div>
+          <p>Guy who uses too much autotune</p>
+        </div>
+        <div class="memberBio">
+          <img src="https://i.iheart.com/v3/catalog/artist/31083712?ops=fit(720%2C720)"/>
+          <h3>Lil Uzi Vert</h3> 
+          <div class="bioSplit"></div>
+          <p>Guy who uses too much autotune</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="createdBy">
+      <p>Website created by Kamran Huseynov, Jack Zimmerman</p>
+      <!-- I changed it to <p> since the screen reader will read it as 
+        a crucial info -->
     </div>
   </body>
 
@@ -40,7 +88,6 @@
   <script>
     AOS.init();
   </script>
-
 
 </html>
 
