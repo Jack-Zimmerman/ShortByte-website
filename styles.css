@@ -33,6 +33,8 @@ body{
 .ripple-bacground {
     position: fixed;
     height: 100vh;
+    max-width: 100vw;
+    x-overflow: hidden;
     z-index: -1;
 }
   
