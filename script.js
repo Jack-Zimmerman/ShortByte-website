@@ -9,8 +9,8 @@ let menuOpen = false;
 
 headLinks.forEach(link => {
     link.addEventListener('click', () => {
-        headLinks.forEach(notLink => notLink.classList.remove('active'))
-        link.classList.add('active')
+        link.classList.remove('active')
+        link.target.classList.add('active')
     })
 });
 
