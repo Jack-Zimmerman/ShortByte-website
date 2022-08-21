@@ -16,8 +16,8 @@
     src: url(fonts/CircularAir-Light.woff2) format('woff2');
 }
 @font-face {
-    font-family: 'montserrat';
-    src: url(fonts/montserrat/Montserrat-Regular.otf) format("opentype");
+    font-family: 'SFMono-Regular';
+    src: url(fonts/SFMonoRegular.woff) format("woff");
 }
 
 * {
@@ -27,7 +27,7 @@
 }
 
 
-body{
+body {
     position: relative;
     overflow-x: hidden;
     height: 100vh;
@@ -226,7 +226,7 @@ body{
   border: 0px;
   font-weight: 100;
   letter-spacing: 2px;
-  background-image: linear-gradient(45deg, #2f59ff 0%, #00c3ff  51%, #2f59ff  100%);
+  background-image: linear-gradient(45deg #2f59ff 0%, #00c3ff  51%, #2f59ff  100%);
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
@@ -237,7 +237,6 @@ body{
 
 .contactUs:hover {
   background-position: right center;
-  /*edit ^^^ to change direction of transition*/
   color: #fff;
   text-decoration: none;
 }
@@ -257,7 +256,8 @@ body{
 
 .introduction {
     display: grid;
-    grid-template-columns: 1fr auto;    
+    grid-template-columns: 1fr .8fr;    
+    gap: 40px;
     height: 550px;
     width: 100%;
     background-color: #dee5f4;
@@ -268,20 +268,27 @@ body{
 
 .txtBox {
     align-self: baseline;
-    margin: 75px 0 0 75px;
+    margin: 75px 0 0 3vw;
 }
 
 .txtBox .title {
     text-align: center;
 }
 
+.author { 
+    font-size: 1.5rem;
+    text-align: right;
+    margin: 10px 20px 0 0;
+}
+
 .txtBox span {
     color: var(--primary-color);
 }
 
+
 .website-animation {
     display: flex;
-    width: 790px;
+    width: clamp(710px, 52vw, 800px);
     height: 490px;
     align-items: center;
     margin: 0 20px 0 20px;
@@ -382,41 +389,93 @@ body{
 
 .code-skeleton > div{
     position: relative;
-    width: 270px;
+    display: flex;
+    flex-flow: column;
+    width: 310px;
     height: 150px;
-    right: -100px;
+    padding: 7px 10px;
+    gap: 2px;
+    right: -110px;
     border-radius: 16px;
     opacity: 0;
     background-color: rgb(19, 19, 19);
     animation: slide-left ease .8s forwards calc(1.2s + var(--code-order) * 200ms);
 }
 
-.code-skeleton * span {
+.code-skeleton > div > div:first-child {
+    font-family: 'SFMono-Regular', monospace;
+    font-size: 1rem;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    width: min-content;
 }
 
-.html span {
-    background-image: linear-gradient(45deg, #2f59ff 0%, #00c3ff  51%, #2f59ff  100%);
+
+.html > div:first-child {
+    background-image: linear-gradient(45deg, #e34c26 0%, #ebb49d  100%);
 }
 
 .css{
-    right: -190px !important;
+    right: -9vw !important;
 }
-.css span {
-    background-image: linear-gradient(45deg, #2f59ff 0%, #00c3ff  51%, #2f59ff  100%);
+.css > div:first-child {
+    background-image: linear-gradient(45deg, #2f59ff 0%, #00c3ff  100%);
 }
 
-.js span{
-    background-image: linear-gradient(45deg, #2f59ff 0%, #00c3ff  51%, #2f59ff  100%);
+.js > div:first-child{
+    background-image: linear-gradient(45deg, #ff873d 0%, #f0db4f 100%)
+}
+
+.embeded-code *{
+    font-family: 'SFMono-Regular', monospace;
+    color: white;
+    font-size: .7rem;
+    line-height: 1rem;
+}
+
+.element {
+    color: #4b78c6;
+}
+
+.css-element, .js-method {
+    color: rgb(255, 239, 118);
+}
+
+.js-array {
+    color: #00ace0;
+}
+
+.js-element {
+    color: #b0e9ff;
+}
+
+.js-purple {
+    color: rgb(255, 84, 221);
+}
+
+.attribute {
+    color: rgb(150, 196, 249);
+}
+.value {
+    color: orange;
+}
+.number {
+    color: #00CA4E;
+}
+
+
+pre {
+    margin: 0;
+    height: min-content;
+    width: min-content;
 }
 
 @keyframes slide-left {
     from {
         transform: translateX(30%);
     }
-
+    
     to {
         transform: translateX(0%);
         opacity: .98;
@@ -440,7 +499,7 @@ body{
     padding: 0;
 }
 
-.txtBlock li{
+.txtBlock li, .txtBox > div:nth-child(2){
     font-size: clamp(1.5rem, 1.8vw, 1.8rem);
     margin-top: 10px;
     font-family: 'circular-light';
@@ -570,5 +629,41 @@ body{
     .createdBy {
         position: relative;
         font-size: .7rem;
+    }
+
+    .introduction {
+        display: flex;
+        flex-flow: column wrap;
+        height: auto;
+        gap: 0;
+        justify-items: center;
+    }
+    .website-animation {
+        margin-left: 10px;
+        order: 1;
+        margin-top: 40px;
+        flex: 1 1 auto;
+    }
+    
+    .txtBox {
+        order: 2;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .code-skeleton {
+        align-items: flex-start;
+    }
+}
+@media only screen and (min-width: 500px) {
+    .code-skeleton {
+        align-items: center;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .code-skeleton {
+        align-items: flex-end;
     }
 }
