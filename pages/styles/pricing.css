@@ -126,19 +126,22 @@
 .details{
     margin-left: 22%;
 
+    transition: 0.5s;
     font-size: 1.5rem;
     padding-right: 50px;
     padding-left: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background: linear-gradient(90deg, rgb(46, 145, 179), rgb(86, 86, 244));
+    background: linear-gradient(90deg, rgb(46, 145, 179) 0%, rgb(131, 159, 233) 50%, rgb(86, 86, 244) 100%);
     border-radius: 20px;
+    background-size: 200% auto;
+    background-position: left;
     color: white;
     text-decoration: none;
 }
 
 .details:hover{
-    background: linear-gradient(180deg, rgb(31, 118, 148), rgb(52, 52, 206));
+    background-position: right;
 }
 
 .details:active{
