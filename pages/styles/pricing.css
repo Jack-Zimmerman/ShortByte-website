@@ -60,8 +60,9 @@
 }
 
 .priceCard:hover{
-    transform: scale(1.1);
 
+    cursor: pointer;
+    transform: scale(1.1);
     transition: all ease 0.2s;
 }
 
@@ -119,7 +120,7 @@
 }
 
 .supreme h1{
-    color: green;
+    color: rgb(1, 78, 1);
 }
 
 
@@ -154,3 +155,57 @@
         margin-top: 5vw;
     }
 }
+
+
+/*
+START DETAILS CODE
+*/
+
+.detailsDivider{
+    position: relative;
+    width: 80vw;
+    left: 10vw;
+    height: 5px;
+    background: linear-gradient(90deg, lightblue 0%, blue 80%, black 100%);
+    box-shadow: 3px 3px 10px 0.1px black;
+    border-radius: 5px;
+
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+
+.detailElement{
+    position: relative;
+    width: 70vw; 
+    left: 15vw;
+    padding-left: 2vw;
+    height: fit-content;
+    backdrop-filter: blur(15px);
+    border-color: black;
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 0.2px black;
+
+    margin-bottom: 5vh;
+}
+
+
+.detailElement h3{
+    margin-top: -15px;
+}
+
+.detailElement ul{
+    margin-top: -10px;
+}
+
+
+@media only screen and (max-aspect-ratio: 4/4){
+    .detailElement{
+        width: 90vw;
+        padding: 20px;
+    }
+}
+
+

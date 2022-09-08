@@ -15,7 +15,7 @@ headLinks.forEach(link => {
 });
 
 menuBtn.addEventListener('click', () => {
-    if(!menuOpen) {
+    if(!menuOpen) { 
         modal.classList.add('active')
         menuBtn.classList.add('open')
         menuOpen = true;
@@ -32,3 +32,26 @@ if (mediaQueryList === true) {
         animation.setAttribute('data-aos-duration', '400')
     })
 }
+
+
+
+
+//for pricing.html:
+
+const details = Array.from(document.querySelectorAll('.details'))
+const detailElements = [document.getElementsByClassName('detailElement basic')[0],
+                        document.getElementsByClassName('detailElement supreme')[0],
+                        document.getElementsByClassName('detailElement advanced')[0]]
+
+
+details.map(function(e, i){
+    return [e, detailElements[i]]
+}).forEach(([button,anchor])=>{
+    button.addEventListener('click', ()=>{
+        anchor.scrollIntoView({behavior: "smooth"});
+
+        
+    })
+})
+
+
